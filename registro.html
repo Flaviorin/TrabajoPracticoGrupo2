@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="es-AR">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>FleteSimple</title>
+        <meta name="description" content="Place shipping bids on thousands of available jobs on our load board. Used by millions." />
+        <meta name="theme-color" content="#0f4c8b" />
+        <link rel="icon" type="image/x-icon" href="./img/iconos/favicon.ico"/>
+        <link rel="stylesheet" href="css/main2.css">
+
+        <script>
+            function validateForm() {
+                let x = document.forms["formulario"]["Nombre"].value;
+                let y = document.forms["formulario"]["Apellido"].value;
+                let z = document.forms["formulario"]["Pais"].value;
+                let ml = document.forms["formulario"]["email"].value;
+                let te = document.forms["formulario"]["Teléfono"].value;
+                let usu = document.forms["formulario"]["Usuario"].value;
+                let cl = document.forms["formulario"]["Clave"].value;
+                let regExpValidateNombre = /[A-Za-z\s\p{L}]{3,15}/;
+                let regExpValidateApellido = /[A-Za-z\s\p{L}]{3,15}/;
+                //   let regExpValidateMail = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/; regular expresion que le falta definicion mas amplia
+                let regExpValidateMail = /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/;
+                let regExpValidateTel = /[0-9]{3}-[0-9]{4}-[0-9]{4}/;
+                // let regExpValidateUsu = /(?=.*[a-z]).{8,12}/;
+                let regExpValidateUsu = /^[a-z0-9]{6,12}$/;
+                let regExpValidateClave = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/;
+                // if (x == "" || x.length < 3 ) { validaciones anteriores
+                if (!x.match(regExpValidateNombre)) {
+                    alert("El nombre debe contener entre 3 y 15 caracteres alfabéticos");
+                    return false;
+                }
+                // if (y == "" || y.length < 3) { validaciones anteriores
+                if (!y.match(regExpValidateApellido)) {
+                    alert("El Apellido debe contener entre 3 y 15 caracteres alfabéticos");
+                    return false;
+                }
+                if (z == "0") {
+                    alert("Debe seleccionar un País de la lista");
+                    return false;
+                }
+                if (!te.match(regExpValidateTel)) {
+                    alert("El teléfono debe ingresarlo en formato 012-3456-7890");
+                    return false;
+                }
+                if (!ml.match(regExpValidateMail)) {
+                    alert("Debe ingresar una dirección de Email válida, ingrese caracteres alfanúmericos seguidos por un @(arroba), luego deben seguir más caracteres, y un '.'(punto), luego seguido por al menos 2 letras de la 'a' a la 'z'");
+                    return false;
+                }
+                if (!usu.match(regExpValidateUsu)) {
+                    alert("El usuario a ingresar debe expresarlo solo minúscula y números de entre 6 y 12 caracteres");
+                    return false;
+                }
+                if (!cl.match(regExpValidateClave)) {
+                    alert("Contraseña debe contener al menos un número, una letra minúscula y una mayúscula, y al menos 8 caracteres");
+                    return false;
+                }
+            }
+        </script>
+
+
+    </head>
+    <body id="body-formulario">
+        <header id="idheader">
+
+        </header>
+        <main>
+        <br><br><br><br>
+        <div class="contenedor-formulario">
+            <Form name="formulario" action="show_data.html" target="_blank" onsubmit="return validateForm()">
+                <h3 class="titulo-formulario">Clientes / Transportistas<br>
+                    Formulario de registro</h3>
+                <!-- <label for="nombre">Nombre</label> -->
+                    <input type="text" id="nombre" name="Nombre" placeholder="Tú nombre completo aquí..">
+                <br>
+                <!-- <label for="apellido">Apellido</label> -->
+                    <input type="text" id="apellido" name="Apellido" placeholder="Tú apellido aquí..">
+                <br>
+                <!-- <label for="pais">País</label> -->
+                    <section class="flex-container-1">
+                        <div>
+                            <select id="pais" name="Pais">
+                                <option value="0">Selecciona tú País:</option>
+                                <option value="Argentina">Argentina</option>
+                                <option value="Brasil">Brasil</option>
+                                <option value="Chile">Chile</option>
+                                <option value="Paraguay">Paraguay</option>
+                                <option value="Uruguay">Uruguay</option>
+                            </select>
+                        </div>
+                        <div>
+                            <input type="tel" id="telefono" name="Teléfono" placeholder="Tú número de teléfono aquí..">
+                        </div>
+                    </section>
+                    <br>
+                    <input type="email" id="email" name="email" placeholder="Tú dirección de email aquí..">
+                    <br><br>
+                    <hr>
+                    <br>
+                        <input type="text" id="usuario" name="Usuario" placeholder="Ingresa tu nombre de usuario aquí..">
+                        <p class="guide-text">No ingreses el nombre de tu compania ni tu dirección de email.</p>
+                    <input type="password" id="clave" name="Clave" placeholder="Ingresa tu contraseña aquí..">
+                    <br><br>
+                    <p>Transportista:
+                        <Input Type="radio" name="transportista" value="SI"> SI
+                        <Input Type="radio" name="transportista" value="NO" checked> No
+                    </p>
+                    <!-- <input type="password" id="repite-clave" name="repite-clave" placeholder="Repite el ingreso de tu contraseña aquí..">
+                        <p class="guide-text">Las contraseñas deben coincidir.</p> -->
+                    <br>
+                    <input type="submit" value="Completar el registro">
+                    <p class="guide-text-terminos">Sí realiza click en Completar el registro, estarás aceptando nuestros <a class="guide-text-terminos-link" href="./terminosycondiciones.html">términos y condiciones</a>.</p>
+            </form>
+        </div>
+        <br>
+        </main>
+        <footer id="idfooter">
+            
+        </footer>
+        <script type="text/javascript" src="./js/index.js"></script>
+        <script type="text/javascript">
+            obtenerPais(obtenerClima);
+        </script>
+    </body>
+</html>

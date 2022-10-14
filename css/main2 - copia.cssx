@@ -1,0 +1,520 @@
+/* // IMPORTANT */
+*{
+    margin: 0;
+    padding: 0;
+    /* font-family: Verdana, Verdana, Geneva, Tahoma, sans-serif; */
+ } 
+
+body{
+    overflow-x: hidden;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.nav {
+	position: fixed;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 60px;
+    width: 100%;
+	top: 0;
+    background: #42A5F5;
+    z-index: 9;
+}
+
+#imagen_home_logo_camion{
+    width: 232px;
+}
+
+.nav_item, .subnav_item {
+    display: inline-block;
+	margin: 0px 10px;
+}
+
+.nav_item_stilo, .sub_nav_item_stilo {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.presentacion {
+	display: grid;
+	justify-content: center;
+	background: #BBDEFB;
+    margin-top: 40px;
+    width: 101%;
+    padding-bottom: 40px;
+}
+
+.h1_centrado_titulo_presentacion {
+    font-size: 3em;
+    margin: 0 10px;
+    text-align: center;
+}
+
+#parrafoexplicativo{
+    text-align:left;
+    font-size:large;
+    /* si esta el * habilitado arriba 
+    asterisco con margen 0 y pdding 0 
+    no hay que utilizar la linea de abajo  */
+    /* margin-block-end: -0.8em;  */
+    /* utilizo google fonts y ahora lo necesito */
+    margin-block-end: 0.2em;
+}
+
+#camioncito_item{
+    width: 15px;
+    padding-left: 20px;
+    padding-right: 5px;
+}
+
+.Contenedor-imagenes-presentacion{
+    padding-top: 40px;
+    padding-left: 150px;
+}
+
+.imagenes_presentacion{
+    width: 200px;
+    height: 150px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.seccion_como_funciona {
+	max-width: auto;
+	padding: 90px 30px;
+	background-color: #0f4c8b;
+	text-align: center;
+    color: white;
+    width: 96.1%;
+}
+
+.titulo-como-funciona {
+    font-size: 3em;
+    margin-top: -15px;
+    text-align: left;
+}
+
+.como-funciona-container{
+    display: flex;
+}
+
+.parrafo-como-funciona {
+    line-height: 1.625em;
+    margin: left;
+    max-width: 480px;
+    font-family: Helvetica,Arial,sans-serif;
+    font-size: 1.5rem;
+}
+
+.imagenes-como-funciona{
+    position: relative;
+    overflow: hidden;
+    display: block;
+}
+
+.imagen-trabaja1{
+    /* position: absolute; */
+    top: 100px;
+    left: 10px;
+    z-index: 1;
+}
+
+.imagen-trabaja2{
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    z-index: 2;
+}
+
+
+#comenzar-ahora-super-seccion{
+    margin: auto;
+    height: 2000px;
+}
+
+@media (min-height: 768px) {
+    #comenzar-ahora-super-seccion {
+      height: 2000px;
+    }
+}
+
+#subnav {
+    position: sticky;
+    top: 60px;
+    display: flex;
+}
+
+.subnav_container {
+    background: #fff;
+    align-items: baseline;
+    display: flex;
+    /* margin: 0 60px; */
+    padding: 15px 0;
+    padding-left: 200px;
+    width: 100%;
+    border-bottom: 1px solid #222;
+    /* padding-right: 17px; */
+}
+
+.subnav_list {
+    margin: 0 15px;
+}
+
+.subnav_item {
+    background: #fff;
+    display: inline-block;
+    margin: 0 8px;
+    padding: 5px;
+}
+
+.subnav_title {
+    padding-left: 160px;
+    padding-right: 30px;
+}
+
+/* .subnav_item {
+    color: black;
+    text-decoration: none;    
+} */
+
+.sub_nav_item_stilo:hover{
+    color: #11aa58;
+    text-decoration:underline;
+    /* font-size: 20px; -- al agrandarlo se mueven los demas ver */
+}
+
+.boton_comienza_ahora{
+    text-align: center;
+    /* border: solid; */
+    /* background-color: #42A5F5; */
+    width: 222px;
+    display: block;
+    margin: -5px auto 0;
+    background-color: #11aa58;
+    height: 55px;
+    line-height: 55px;
+    padding: 0;
+    font-size: 2em;
+    border-radius: 15px;
+}
+
+.comienza_ahora_stylo{
+    text-decoration: none;
+    color:white;
+}
+
+.boton_comienza_ahora:hover{
+    background-color: #12cd72;
+}
+
+.comienza_ahora_stylo:hover{
+    color: lightgoldenrodyellow;
+}
+
+.seccion_eres_transportista {
+	max-width: auto;
+	padding: 195px 30px;
+	background-color: #cc95f0;
+	text-align: center;
+    color: black;
+    width: 96.1%;
+
+}
+
+.titulo-eres_transportista {
+    font-size: 3.3em;
+    /* antes estaba en -55% la linea de abajo
+    es porque estoy utilizando el css de asterizco
+    con margen y padding en cero */
+    margin-top: -100px;
+    text-align: center;
+}
+
+.eres-transportista-container{
+	/* position: sticky; */
+	display: flex;
+	justify-content: space-between;
+	height: 60px;
+	top: 0;
+}
+
+.parrafo_registrarse{
+    font-size: 23px;
+    text-align: left;
+}
+
+.boton-eres-transportista-container{
+    padding-right: 180px;
+    padding-top: 30px;
+}
+
+.boton_registrese_gratis{
+    /* text-align: left; */
+    width: 275px;
+    display: block;
+    margin: -5px auto 0;
+    background-color: #11aa58;
+    height: 55px;
+    line-height: 55px;
+    padding: 0;
+    font-size: 2em;
+    border-radius: 15px;
+}
+
+.seccion-envia-solicitud{
+    display: flex;
+    background-color: #b3ddff;
+    max-width: auto;
+	padding: 180px 30px;
+	/* text-align: center; */
+    color: black;
+    width: 96%;
+    justify-content: space-between;
+}
+
+.imagen1-solicitud{
+    /* border: 5px ridge #555; es para dejar un borde pero queda feo */ 
+    border-radius: 5%;
+}
+
+.imagen-describe-envia-solicitud{
+    padding-left: 40px;
+}
+
+.texto-describe-solicitud{
+    padding-right: 50px;
+
+}
+
+.titulo-cuenta-envio{
+    font-size: 35px;
+    font-weight: bold;
+    margin-top: 0px;
+}
+
+.subtitulo-parrafo-solicitud{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#lista-item-solicitud{
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 42px;
+    /* list-style-type: circle; */
+    /* list-style-image: url('/img/iconos/favicon.ico'); */
+}
+
+.imagen-caja-medio-solicitud{
+    width: 120px;
+    height: 270px;
+}
+
+
+footer {
+	text-align: center;
+    background: #42A5F5;
+    /* height: 60px;
+    width: 100%;
+    font-size: 15px; */
+    /* position: sticky; */
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    height: 40px;
+    font-size: 20px;
+}
+
+/* CSS para el formulario */
+
+.contenedor-formulario{
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    width: 50%;
+    /* display: flex; */
+    justify-content: center;
+    margin-left: 25%;
+    margin-right: 25%;
+    border-radius: 7px;
+}
+
+.contenedor-formulario h3{
+    text-align: center;
+    margin-top: 0%;
+}
+
+.titulo-formulario{
+    font-size: 1.6em;
+    margin-bottom: 0%;
+}
+
+.flex-container-1{
+    display: flex;
+}
+
+.flex-container-1 > div{
+    /* margin: 0.4rem; */
+    margin-right: 2.9rem;
+}
+
+.guide-text {
+    color: red;
+    font-size: 0.76em;
+    margin-top: -5px;
+    text-align: center;
+}
+
+.guide-text-terminos {
+    color: red;
+    font-size: 0.76em;
+    text-align: center;
+    margin-top: 1px;
+}
+
+.guide-text-terminos-link{
+    color: red;
+    /* font-size: 0.76rem; */
+    margin-top: 0px;
+}
+
+.text-center-terminos{
+    text-align: center;
+}
+
+#body-formulario{
+    background-image: url("/img/mudanza.jpg");
+    background-size: cover;
+    background-position-x: center;
+    position: relative;
+}
+
+input[type=text],input[type=email],
+input[type=password]{
+    width: 92%;
+    border-radius: 7px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    /* border-radius: 4px; */
+}
+
+select, input[type=tel] {
+    width: 100%;
+    border-radius: 7px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;  
+}
+
+input[type=submit]{
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    padding-top: 0;
+    padding-bottom: 0;
+    font-size: 1.6em;
+    background: #259b24;
+    color: #fff;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover{
+    color: lightgray;
+    background-color: #0a8f08;
+    border-color: #547a29;
+    border-radius: 7px;
+}
+
+
+/* FIN CSS para el formulario */
+
+/* CSS Terminos y condiciones */
+.text-center-terminos{
+    text-align: center;
+}
+
+.terminos-body{
+    display: block;
+    margin: 8px;
+}
+
+.terminos-body div{
+    display: block;
+}
+
+.terminos-body div h2{
+    display: block;
+    font-size: 1.5em;
+    margin-top: 0.83em;
+    margin-bottom: 0.83em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+
+.terminos-body div p{
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.terminos-body div ol{
+    display: block;
+    list-style-type: decimal;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 40px;
+}
+
+.terminos-body div ol li{
+    display: list-item;
+}
+
+
+/* FIN CSS Terminos y condiciones */
+
+/* CSS de Show Data */
+.showdata .center{
+    text-align: center;
+}
+.showdata .align-left{
+    text-align: left;
+}
+
+.showdata h4{
+    text-align: center;
+}
+
+.showdata table, th, td {
+    border: 1px solid;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.showdata img {        
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.showdata .fieldset-auto-width {
+    display: inline-block;
+}
+/* Fin de Show Data */
+
